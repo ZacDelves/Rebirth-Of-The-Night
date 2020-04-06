@@ -1,5 +1,6 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
+import crafttweaker.liquid.ILiquidStack;
 import mods.jei.JEI;
 
 mods.jei.JEI.addDescription(<rustic:cloudsbluff>,"This puffy white flower is only found in mountainous biomes. Cloudsbluff can be used to create balloons for air ships.");
@@ -9,12 +10,6 @@ var branchArray = [<dynamictrees:oakbranch>,<dynamictrees:oakbranchx>,<dynamictr
 for branch in branchArray{
     mods.jei.JEI.hide(branch);
 }
-
-mods.jei.JEI.removeAndHide(<rustic:crop_stake>);
-
-mods.jei.JEI.removeAndHide(<rustic:rope>);
-mods.jei.JEI.removeAndHide(<rustic:crushing_tub>);
-mods.jei.JEI.hideCategory("rustic.crushing_tub");
 
 mods.jei.JEI.removeAndHide(<rustic:tomato_seeds>);
 mods.jei.JEI.removeAndHide(<rustic:tomato>);
@@ -40,40 +35,11 @@ mods.jei.JEI.removeAndHide(<rustic:olive_oil>);
 mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: "oliveoil"}));
 mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "oliveoil", Amount: 1000}}));
 
-mods.jei.JEI.removeAndHide(<rustic:grape_juice>);
-mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: "grapejuice"}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "grapejuice", Amount: 1000}}));
-
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "ironberryjuice", Amount: 1000}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "applejuice", Amount: 1000}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "alewort", Amount: 1000}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "honey", Amount: 1000}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "ale", Amount: 1000, Tag: {Quality: 0.75 as float}}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "cider", Amount: 1000, Tag: {Quality: 0.75 as float}}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "ironwine", Amount: 1000, Tag: {Quality: 0.75 as float}}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "mead", Amount: 1000, Tag: {Quality: 0.75 as float}}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "wildberrywine", Amount: 1000, Tag: {Quality: 0.75 as float}}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "wildberryjuice", Amount: 1000}}));
-mods.jei.JEI.removeAndHide(<rustic:fluid_bottle>.withTag({Fluid: {FluidName: "wine", Amount: 1000, Tag: {Quality: 0.75 as float}}}));
-
-mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: "ironberryjuice"}));
-mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: "wildberryjuice"}));
-mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: "applejuice"}));
-mods.jei.JEI.removeAndHide(<forge:bucketfilled>.withTag({FluidName: "alewort"}));
-
-mods.jei.JEI.removeAndHide(<rustic:ironberry_juice>);
-mods.jei.JEI.removeAndHide(<rustic:wildberry_juice>);
-mods.jei.JEI.removeAndHide(<rustic:apple_juice>);
-mods.jei.JEI.removeAndHide(<rustic:ale_wort>);
-mods.jei.JEI.removeAndHide(<rustic:honey>);
 mods.jei.JEI.removeAndHide(<rustic:beeswax>);
 mods.jei.JEI.removeAndHide(<rustic:honeycomb>);
 mods.jei.JEI.removeAndHide(<rustic:beehive>);
 mods.jei.JEI.removeAndHide(<rustic:bee>);
 mods.jei.JEI.removeAndHide(<rustic:apiary>);
-
-
-mods.jei.JEI.removeAndHide(<rustic:ironberry_juice>);
 mods.jei.JEI.removeAndHide(<rustic:tallow>);
 
 recipes.remove(<rustic:book>);
@@ -82,6 +48,14 @@ recipes.addShaped("almanac",<rustic:book>,[
     [<minecraft:iron_nugget>,<minecraft:book>,<minecraft:iron_nugget>],
     [null,<minecraft:iron_nugget>,null]
 ]);
+
+# Grape seed compat (in case you want to grow rustic grapes using rope/crop stakes)
+
+recipes.addShapeless("grape_seed_compat", <rustic:grape_stem>, [<harvestcraft:grapeseeditem>]);
+
+# Crushing tub recipes
+mods.rustic.CrushingTub.addRecipe(<liquid:honey> * 250, null, <harvestcraft:honeyitem> * 1);
+mods.rustic.CrushingTub.addRecipe(<liquid:grapejuice> * 250, null, <harvestcraft:grapeitem> * 1);
 
 # Iron and Gold Lanterns
 
