@@ -24,8 +24,17 @@ recipe: {
 }
 gen: [
   {
-    height: [ 0, 64 ]
+    height: [ 10, 45 ]
     size: 9
-    count: 20
+    count: 15
+  },
+  {
+    height: [ 10, 155 ]
+    size: 25
+    count: 90
+	chance: 0.6
+	biomes: {
+		types: ["JUNGLE"]
+	}
   }
 ]

@@ -27,5 +27,14 @@ gen: [
     height: [ 0, 128 ]
     size: 20
     count: 17
+  },
+  {
+    height: [ 0, 155 ]
+    size: 20
+    count: 23
+	chance: 0.6
+	biomes: {
+		types: ["JUNGLE"]
+	}
   }
 ]

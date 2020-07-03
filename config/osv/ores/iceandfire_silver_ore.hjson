@@ -27,5 +27,14 @@ gen: [
     height: [ 4, 32 ]
     size: 9
     count: 2
+  },
+  {
+    height: [ 4, 64 ]
+    size: 2
+    count: 44
+	chance: 0.4
+	biomes: {
+		types: ["RIVER","MAGICAL"]
+	}
   }
 ]

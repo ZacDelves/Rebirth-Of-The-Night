@@ -22,15 +22,4 @@ recipe: {
   xp: 1
   quantity: 1
 }
-gen: [
-  {
-    height: [ 4, 32 ]
-    size: 3
-    count: 2
-    biomes: {
-      names: [
-        iceandfire:glacier
-      ]
-    }
-  }
-]
+gen: []

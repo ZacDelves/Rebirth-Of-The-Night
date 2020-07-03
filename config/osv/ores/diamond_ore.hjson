@@ -27,5 +27,21 @@ gen: [
     height: [ 0, 16 ]
     size: 8
     count: 1
+  },
+  {
+    height: [ 60, 155 ]
+    size: 1
+    count: 23
+	chance: 0.5
+	biomes: {
+		names: ["biomesoplenty:volcanic_island"]
+	}
+  },
+  {
+	height : [0, 255]
+	size: 10
+	count: 38 
+	chance: 0.7
+	dimensions: [10]
   }
 ]

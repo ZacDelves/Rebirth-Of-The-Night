@@ -24,9 +24,27 @@ recipe: {
 }
 gen: [
   {
-    height: [ 1, 150 ]
-    size: 20
+    height: [ 70, 98 ]
+    size: 50
+    count: 5
+	chance: 0.6
+	biomes: {
+		types: ["DRY","HOT"]
+	}
+  },
+  {
+	height: [ 50, 150 ]
+    size: 16
     count: 40
 	chance: 1.0
+  },
+  {
+    height: [ 70, 98 ]
+    size: 30
+    count: 30
+	chance: 0.9
+	biomes: {
+		types: ["SANDY"]
+	}
   }
 ]

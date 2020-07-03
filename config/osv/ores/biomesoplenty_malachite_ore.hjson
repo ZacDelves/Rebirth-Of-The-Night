@@ -21,15 +21,4 @@ recipe: {
   xp: 1.2000000476837158
   quantity: 1
 }
-gen: [
-  {
-    height: [ 4, 32 ]
-    size: 4
-    count: 1
-    biomes: {
-      types: [
-        SWAMP
-      ]
-    }
-  }
-]
+gen: []
