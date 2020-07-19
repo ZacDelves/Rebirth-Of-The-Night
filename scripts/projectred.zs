@@ -33,20 +33,22 @@ for i in 0 to 516 {
     }
 }
 
-for i in 0 to 17 {
+for i in 0 to 1 {
     recipes.remove(<projectred-transmission:wire>.definition.makeStack(i));
 }
 
-for i in 17 to 35 {
+for i in 1 to 35 {
     JEI.removeAndHide(<projectred-transmission:wire>.definition.makeStack(i));
 }
 
-for i in 0 to 35 {
-    if (i == 17 | i == 34) {
+recipes.remove(<projectred-transmission:framed_wire:0>);
+
+for i in 1 to 35 {
+    // if (i == 17 | i == 34) {
         JEI.removeAndHide(<projectred-transmission:framed_wire>.definition.makeStack(i));
-    } else {
-        recipes.remove(<projectred-transmission:framed_wire>.definition.makeStack(i));
-    }
+    // } else {
+    //     recipes.remove(<projectred-transmission:framed_wire>.definition.makeStack(i));
+    // }
 }
 
 val gateRemove = [13, 15, 16, 18, 22, 25, 26, 27, 28, 29, 30, 32, 34] as int[];
@@ -108,9 +110,9 @@ val redIronCompound = <projectred-core:resource_item:251>;
 val redAlloyIngot = <projectred-core:resource_item:103>;
 
 val alloyWire = <projectred-transmission:wire:0>;
-val insulatedWire = <ore:projredInsulatedWire>;
+// val insulatedWire = <ore:projredInsulatedWire>;
 val framedAlloyWire = <projectred-transmission:framed_wire:0>;
-val framedInsulatedWire = <ore:projredInsFramedWire>;
+// val framedInsulatedWire = <ore:projredInsFramedWire>;
 
 val gateOR = <projectred-integration:gate:0>;
 val gateNOR = <projectred-integration:gate:1>;
@@ -181,7 +183,7 @@ mods.betterwithmods.Anvil.addShaped(alloyWire * 12, [
     [redAlloyIngot, mrepeater, null, null]
 ]);
 
-val colors = [
+/* val colors = [
     "White",
     "Orange",
     "Magenta",
@@ -243,7 +245,7 @@ recipes.addShapeless("insulated_wire_stripping", alloyWire, [
 recipes.addShapeless("insulated_framed_wire_stripping", framedAlloyWire, [
     <ore:shears>.transformDamage(),
     framedInsulatedWire
-]);
+]); */
 
 mods.betterwithmods.Anvil.addShaped(framedAlloyWire * 4, [
     [null, alloyWire, alloyWire, null],
