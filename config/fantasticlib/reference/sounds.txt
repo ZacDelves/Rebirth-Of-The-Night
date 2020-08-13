@@ -813,6 +813,12 @@ quark:item.horse_whistle.blow
 quark:block.tiny_potato.shia_labeouf
 bettercombatmod:player.swordslash
 bettercombatmod:player.criticalstrike
+cookingforblockheads:fridge_open
+cookingforblockheads:fridge_close
+cookingforblockheads:oven_open
+cookingforblockheads:oven_close
+cookingforblockheads:toaster_start
+cookingforblockheads:toaster_stop
 disenchanter:block.disenchantment_table.use
 doggytalents:whistle_short
 doggytalents:whistle_long

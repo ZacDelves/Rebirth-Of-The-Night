@@ -252,6 +252,7 @@ betterwithmods:bwm_fishing_hook
 betterwithmods:bwm_tentacle
 betterwithmods:bwm_jungle_spider
 arcanearchives:weight
+quark:chest_passenger
 quark:stoneling
 quark:archaeologist
 quark:foxhound
@@ -260,12 +261,12 @@ quark:ashen
 quark:pirate
 quark:crab
 quark:wraith
-quark:seat
 quark:flat_item_frame
 quark:leash_knot
 quark:colored_item_frame
 quark:glass_item_frame
-quark:chest_passenger
+quark:seat
+quark:gravisand
 quark:pickarang
 quark:arrow_ender
 quark:arrow_explosive
@@ -273,7 +274,6 @@ quark:arrow_torch
 quark:dragon_breath_bottle
 quark:soul_powder
 quark:parrot_egg
-quark:gravisand
 betterwithaddons:greatarrow
 betterwithaddons:ya
 betterwithaddons:artifactframe
@@ -762,6 +762,7 @@ aether_legacy:whirlwind
 coroutil:bat_smart
 glaretorch:entitytorch
 livingenchantment:livingxporb
+requious:spear
 specialmobs:specialcreeper
 specialmobs:darkcreeper
 specialmobs:deathcreeper

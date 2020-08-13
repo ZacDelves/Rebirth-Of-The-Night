@@ -1,0 +1,50 @@
+name: simpleores_copper_ore
+mod: simpleores
+block: {
+  location: simpleores:copper_ore
+  hardness: 1.7000000476837158
+  level: 1
+}
+loot: [
+  {
+    item: simpleores:copper_ore
+    count: [ 1, 1 ]
+    xp: [ 0, 0 ]
+    chance: 1
+  }
+]
+texture: {
+  shade: false
+  original: simpleores:blocks/copper_ore
+}
+recipe: {
+  result: simpleores:copper_ingot
+  xp: 0.4000000059604645
+  quantity: 1
+}
+gen: [
+  {
+    height: [ 70, 98 ]
+    size: 20
+    count: 6
+	chance: 0.6
+	biomes: {
+		types: ["DRY","HOT"]
+	}
+  },
+  {
+	height: [ 50, 150 ]
+    size: 16
+    count: 30
+	chance: 1.0
+  },
+  {
+    height: [ 70, 98 ]
+    size: 15
+    count: 5
+	chance: 0.9
+	biomes: {
+		types: ["SANDY"]
+	}
+  }
+]
